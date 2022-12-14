@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import db from "./firebase/config";
+
+const usuario = ({nombre: "Paiquer", apellido: "Ortiz", telefono: "8097896756"});
+db.collection("usuario").add(usuario);
+
 
 ReactDOM.render(
   <React.StrictMode>
